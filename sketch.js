@@ -1,7 +1,11 @@
-function setup() {
-createCanvas(480, 120);
-background(200,134,25);
-}
+var value = 0;
 function draw() {
-ellipse(touchX, touchY, 15, 15);
+  fill(value);
+  rect(25, 25, 50, 50);
+}
+function touchMoved() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
 }
